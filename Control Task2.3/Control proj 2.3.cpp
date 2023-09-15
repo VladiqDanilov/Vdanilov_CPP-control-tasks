@@ -25,14 +25,14 @@ int main()
     setlocale(LC_ALL, "ru");
     int t;
     std::vector<int> coins{ 1, 2, 5, 10 };
-    std::cout << "Ñêîëüêî ðóá.  ñäà÷è íåîáõîäèìî âûäàòü ?" << std::endl;
+    std::cout << "Ð¡ÐºÐ¾Ð»ÑŒÐºÐ¾ Ñ€ÑƒÐ±.  ÑÐ´Ð°Ñ‡Ð¸ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ð²Ñ‹Ð´Ð°Ñ‚ÑŒ ?" << std::endl;
     std::cin >> t;
     std::vector<int> res;
 
     int count = min_coins(coins, t, res);
 
-    std::cout << "Ìèíèìàëüíîå êîëè÷åñòâî ìîíåò: " << count << std::endl;
-    std::cout << "Èñïîëüçîâàííûå ìîíåòû: ";
+    std::cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¼Ð¾Ð½ÐµÑ‚: " << count << std::endl;
+    std::cout << "Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð½Ñ‹Ðµ Ð¼Ð¾Ð½ÐµÑ‚Ñ‹: ";
     for (int coin : res) {
         std::cout << coin << " ";
     }

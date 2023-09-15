@@ -11,44 +11,44 @@ int main()
     random_device Rand;
     std::mt19937 gen(Rand());
     uniform_int_distribution<int> dist(0, 10);
-    cout << "Ñêîëüêî ðàç áóäåì ñòðåëÿòü?" << endl;
+    cout << "Ð¡ÐºÐ¾Ð»ÑŒÐºÐ¾ Ñ€Ð°Ð· Ð±ÑƒÐ´ÐµÐ¼ ÑÑ‚Ñ€ÐµÐ»ÑÑ‚ÑŒ?" << endl;
     cin >> c;
 
     int centrX= dist(gen);
     int centrY= dist(gen);
     int score = 0;
     
-//    cout << centrX << " è " << centrY << endl;
+//    cout << centrX << " Ð¸ " << centrY << endl;
 
     for (int i = 0; i < c; i++) {
         int x;
         int y;
-        cout << "\n" << "ââåäèòå êîîðäèíàòó âûñòðåëà ïî X" << endl;
+        cout << "\n" << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñƒ Ð²Ñ‹ÑÑ‚Ñ€ÐµÐ»Ð° Ð¿Ð¾ X" << endl;
         cin >> x;
-        cout << "\n" << "ââåäèòå êîîðäèíàòó âûñòðåëà ïî Y" << endl;
+        cout << "\n" << "Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñƒ Ð²Ñ‹ÑÑ‚Ñ€ÐµÐ»Ð° Ð¿Ð¾ Y" << endl;
         cin >> y;
 
         double dist = sqrt(pow((centrX - x), 2) + pow((centrY - y), 2));
         if (dist <= 1) {
             score += 10;
-            cout << "\n" << "Ïîïàäàíèå! : +10. score: " << score << endl;
+            cout << "\n" << "ÐŸÐ¾Ð¿Ð°Ð´Ð°Ð½Ð¸Ðµ! : +10. score: " << score << endl;
         }
         else if(dist <= 2){
             score += 5;
-            cout << "\n" << "Ïîïàäàíèå! : +5 ê score: " << score << endl;
+            cout << "\n" << "ÐŸÐ¾Ð¿Ð°Ð´Ð°Ð½Ð¸Ðµ! : +5 Ðº score: " << score << endl;
         }
         else if (dist <= 3) {
             score += 1;
-            cout << "\n" << "Ïîïàäàíèå! : +1 ê score: " << score << endl;
+            cout << "\n" << "ÐŸÐ¾Ð¿Ð°Ð´Ð°Ð½Ð¸Ðµ! : +1 Ðº score: " << score << endl;
         }
         else {
-            cout << "\n" << "Íå ïîïàëè" << endl;
+            cout << "\n" << "ÐÐµ Ð¿Ð¾Ð¿Ð°Ð»Ð¸" << endl;
         }
 
     }
-    cout << "\n" << "Êîëëè÷åñòâî î÷êîâ:" << score << endl;
+    cout << "\n" << "ÐšÐ¾Ð»Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð¾Ñ‡ÐºÐ¾Ð²:" << score << endl;
 
-    cout << "Öåíòð áûë â òî÷êå: " << centrX << " ; " << centrY << endl;
+    cout << "Ð¦ÐµÐ½Ñ‚Ñ€ Ð±Ñ‹Ð» Ð² Ñ‚Ð¾Ñ‡ÐºÐµ: " << centrX << " ; " << centrY << endl;
 
 
 }

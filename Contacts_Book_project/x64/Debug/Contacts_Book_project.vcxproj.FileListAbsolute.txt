@@ -1,0 +1,2 @@
+X:\Programming\C++ Programming\Contacts_Book_project\x64\Debug\Contacts_Book_project.exe
+T:\Programming\ITMO Programming C++\Contacts_Book_project\x64\Debug\Contacts_Book_project.exe
